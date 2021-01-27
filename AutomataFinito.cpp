@@ -521,6 +521,17 @@ class AutomataFinito {
                 }
             }
         }
+        map<pair<int, char>,unordered_set<int>>
+        obtener_transiciones ()
+        {
+            return transiciones;
+        }
+
+        void asignar_transiciones( 
+            map<pair<int, char>,unordered_set<int>> nuevas_tran)
+        {
+            transiciones = nuevas_tran;
+        }
 };
 /*
     La clase AutomataFinitoNoDeterminista hereda de AutomataFinito
@@ -538,7 +549,3 @@ class AutomataFinitoDeterminista : public AutomataFinito {
     
 };
 
-int main () {
-    
-    return 0;
-}
